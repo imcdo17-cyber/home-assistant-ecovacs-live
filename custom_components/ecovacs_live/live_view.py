@@ -33,6 +33,8 @@ from av import AudioFrame
 
 from homeassistant.core import HomeAssistant
 
+from .pin import encode_live_view_pin
+
 _LOGGER = logging.getLogger(__name__)
 
 APP_ID = "ecovacs"
@@ -205,7 +207,7 @@ async def async_start_watch(
         "did": robot["did"],
         "mid": robot["class"],
         "res": robot["resource"],
-        "pwd": hashlib.md5(f"eco_{pin}".encode("utf-8")).hexdigest().lower(),
+        "pwd": encode_live_view_pin(pin, robot),
         "auth": json.dumps(auth, separators=(",", ":")),
         "channel": APP_CHANNEL,
     }

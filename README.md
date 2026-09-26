@@ -8,7 +8,7 @@ camera support using the ECOVACS Kinesis/WebRTC flow.
 
 ## Status
 
-**Tested with:** ECOVACS DEEBOT T90 OMNI
+**Tested with:** ECOVACS DEEBOT T90 OMNI and GOAT O1000 LiDAR Pro
 
 This project uses private/undocumented ECOVACS APIs and may stop working if
 ECOVACS changes its application or backend services.
@@ -19,6 +19,7 @@ ECOVACS changes its application or backend services.
 - Automatic robot discovery using `GetGlobalDeviceList`
 - No hardcoded robot DID, class, resource or serial number required
 - Live View PIN verification
+- Device-family-specific Live View PIN encoding for GOAT and DEEBOT models
 - AWS Kinesis/WebRTC video session
 - Home Assistant camera entity
 - MJPEG dashboard stream
