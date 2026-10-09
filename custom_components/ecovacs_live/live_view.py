@@ -21,7 +21,7 @@ from urllib.parse import urlparse
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 import websockets
-from aiortc import (
+from ._vendor.aiortc import (
     MediaStreamTrack,
     RTCConfiguration,
     RTCIceServer,
